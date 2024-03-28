@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Gwan</title>
+
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+    
+            #main {
+                background: linear-gradient(137deg, #2E457B 0%, #237431 100%) !important;
+                box-shadow: 0 0 40px #00275A;
+                margin-top: 65px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                width: 100%;
+            }
+
+            #mainwrapper {
+                display: table;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            h1 {
+                color: #EE6628;
+                font-size: 44px;
+                font-weight: normal;
+                text-shadow: 1px 1px 2px #A7A7A7;
+            }
+
+            h2 {
+                color: #385792;
+                font-weight: normal;
+                font-size: 25px;
+                text-shadow: 1px 1px 2px #D4D4D4;
+            }
+
+            ul {
+                text-align: left;
+                margin-top: 20px;
+            }
+
+            p {
+                margin-top: 20px;
+                color: #888;
+            }
+
+            a {
+                color: #4D73BB;
+                text-decoration: none;
+            }
+
+            a:hover, a:focus {
+                text-decoration: underline;
+            }
+        </style>
+
+
+    <style>
+    /*渐变背景CSS */
+    #canvas-basic {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -999;
+    }
+    </style>
+
+<!--wyy音乐播放器所用的文件-->
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
+
+
+    </head>
+
+    
+    <body>
+        <!--中间文本-->
+        <div id="main">
+            <div id="mainwrapper">
+                <h1>Gwan</h1>
+                <h2>Page successfully added</h2>
+
+                <ul>
+                    <li>The page is in the directory <b>/domains/gwan.serv00.net/public_html</b></li>
+                    <li>This file can be deleted (index.html),</li>
+                    <li>网盘<a href="http://128.204.223.47:1183/">128.204.223.47:1183</a></li>
+                </ul>
+
+                <p>点击<a href="https://2666w.github.io/index1.html">本站</a>.</p>
+            </div>
+        </div>
+
+        <!-- 渐变背景初始化 -->
+    <canvas id="canvas-basic"></canvas> 
+    <script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
+    <script>
+    var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#a18cd1', '#fbc2eb'],
+                 ['#fff1eb', '#ace0f9'],
+                 ['#d4fc79', '#96e6a1'],
+                 ['#a1c4fd', '#c2e9fb'],
+                 ['#a8edea', '#fed6e3'],
+                 ['#9890e3', '#b1f4cf'],
+                 ['#a1c4fd', '#c2e9fb'],
+                 ['#fff1eb', '#ace0f9']
+           
+                ]
+            }
+        }
+    });
+    </script>
+
+    <!-- 网页鼠标点击特效 - 核心价值观关键字 -->
+    <script>
+        (function () {
+        var a_idx = 0;
+        window.onclick = function (event) {
+            var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+            "❤敬业❤", "❤诚信❤", "❤友善❤");
+            var heart = document.createElement("b"); //创建b元素
+            heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+
+            document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+            a_idx = (a_idx + 1) % a.length;
+            heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+            var f = 16, // 字体大小
+            x = event.clientX - f / 2 - 30, // 横坐标
+            y = event.clientY - f, // 纵坐标
+            c = randomColor(), // 随机颜色
+            a = 1, // 透明度
+            s = 1; // 放大缩小
+
+            var timer = setInterval(function () { //添加定时器
+            if (a <= 0) {
+                document.body.removeChild(heart);
+                clearInterval(timer);
+            } else {
+                heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                    c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                    s + ");";
+
+                y--;
+                a -= 0.016;
+                s += 0.002;
+            }
+            }, 15)
+        }
+        // 随机颜色
+        function randomColor() {
+        return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+            .random() * 255)) + ")";
+        }
+        }());
+        </script>
+
+        <!-- PC端下樱花效果 -->
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+        <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
+        <script src="https://cdn.qqsuu.cn/api/js/hua.js"></script>
+
+        <!-- 彩字滚动效果 -->
+        <style>#nr{font-size:20px;margin: 0;background: -webkit-linear-gradient(left,#ffffff,#ff0000 6.25%,#ff7d00 12.5%,#ffff00 18.75%,#00ff00 25%,#00ffff 31.25%,#0000ff 37.5%,#ff00ff 43.75%,#ffff00 50%,#ff0000 56.25%,#ff7d00 62.5%,#ffff00 68.75%,#00ff00 75%,#00ffff 81.25%,#0000ff 87.5%,#ff00ff 93.75%,#ffff00 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-size: 200% 100%;animation: masked-animation 2s infinite linear;}@keyframes masked-animation {0% {background-position: 0 0;}100% {background-position: -100%, 0;}}</style>
+        <div style="position:fixed;top:10px;left:0;width:100%;">
+        <marquee><b id="nr">(｡･∀･)ﾉﾞ嗨，欢迎来到我的小破站。帅气漂亮的小哥哥小姐姐</b> </marquee></div>
+        
+        <!--开站时间开始-->
+        <div style="position : fixed; bottom : 0 ; left : 0 ; width : 100% ; text-align: center ; color : #000 ; ">
+        <span class="nav-item"></span>
+         <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
+         <script language="javascript"> 
+        var now = new Date();
+        function createtime(){
+        var grt= new Date("03/20/2024 00:00:00");/*---这里是网站的启用时间--*/
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "⏱️本站已稳定运行"+dnum+"天";
+        document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+    }
+    setInterval("createtime()",250); 
+    </script>
+    </div>
+
+    <!--明月浩空播放器-->
+    <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+    <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1" au="1" lr="r"></script>  <!--key="165761088297"-->
+    </style>
+
+    
+<!-- 看板娘 -->
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+<!--网易云音乐播放器2-->
+<meting-js 
+    fixed="true" 
+    autoplay="true" 
+    theme="#409EFF" 
+    list-folded="true" 
+    server="netease" 
+    type="playlist" 
+    id="2195404116">
+</meting-js>
+
+
+    </body>
+</html>
