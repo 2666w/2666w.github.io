@@ -82,8 +82,8 @@
 <script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
 <script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
-<!--myhk播放器所用的文件-->
-<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+
+
     </head>
 
     
@@ -100,7 +100,7 @@
                     <li>网盘<a href="http://128.204.223.47:1183/">128.204.223.47:1183</a></li>
                 </ul>
 
-                <p>点击<a href="https://2666w.github.io/">本站</a>.</p>
+                <p>点击<a href="/">本站</a>.</p>
             </div>
         </div>
 
@@ -212,8 +212,10 @@
     </div>
 
     <!--明月浩空播放器-->
+    <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
     <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1" au="1" lr="r"></script>  <!--key="165761088297"-->
 
+    
 <!-- 看板娘 -->
 <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
@@ -225,8 +227,34 @@
     list-folded="true" 
     server="netease" 
     type="playlist" 
-    id="2195404116">
+    id="26467411">
 </meting-js>
+
+
+<!--Sakana @require https://cdn.jsdelivr.net/npm/sakana -->
+<script src="https://cdn.jsdelivr.net/npm/sakana"></script>
+<div class="sakana-box"></div>
+<style>
+  .sakana-box{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    transform-origin: 100% 100%; /* 从右下开始变换 */
+  }
+</style>
+<script>
+  // 取消静音
+  Sakana.setMute(false);
+  // 启动
+  Sakana.init({
+    el:         '.sakana-box',     // 启动元素 node 或 选择器
+    inertia:    0.01,              // 惯性
+    decay:      0.99,              // 衰减
+    scale:      0.5,                // 缩放倍数
+    canSwitchCharacter: true,      // 允许换角色
+  });
+  sakana.confirmRunning();
+</script>
 
 
     </body>
