@@ -61,32 +61,20 @@
         </style>
 
 
-    <style>
-    /*渐变背景CSS */
-    #canvas-basic {
-        position: fixed;
-        display: block;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -999;
-    }
-    </style>
+        <!--wyy音乐播放器所用的文件-->
+        <!-- require APlayer -->
+        <link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
+        <script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+        <!-- require MetingJS -->
+        <script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
 
-<!--wyy音乐播放器所用的文件-->
-<!-- require APlayer -->
-<link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
-<script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
-
+        <!--爱心颜文字+表情 需要-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     </head>
 
     
+
     <body>
         <!--中间文本-->
         <div id="main">
@@ -104,18 +92,33 @@
             </div>
         </div>
 
+
         <!-- 渐变背景初始化 -->
-    <canvas id="canvas-basic"></canvas> 
-    <script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
-    <script>
-    var granimInstance = new Granim({
-    element: '#canvas-basic',
-    direction: 'left-right',
-    isPausedWhenNotInView: true,
-    states : {
-        "default-state": {
-            gradients: [
-                ['#a18cd1', '#fbc2eb'],
+        <canvas id="canvas-basic"></canvas> 
+        <script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
+        <style>
+            /*渐变背景CSS */
+            #canvas-basic {
+            position: fixed;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -999;
+            }
+        </style>
+        <script>
+            var granimInstance = new Granim({
+                element: '#canvas-basic',
+                direction: 'left-right',
+                isPausedWhenNotInView: true,
+                states : {
+                "default-state": {
+                gradients: [
+                 ['#a18cd1', '#fbc2eb'],
                  ['#fff1eb', '#ace0f9'],
                  ['#d4fc79', '#96e6a1'],
                  ['#a1c4fd', '#c2e9fb'],
@@ -123,23 +126,20 @@
                  ['#9890e3', '#b1f4cf'],
                  ['#a1c4fd', '#c2e9fb'],
                  ['#fff1eb', '#ace0f9']
-           
-                ]
-            }
-        }
-    });
-    </script>
+                ]}}
+            });
+        </script>
 
-    <!-- 网页鼠标点击特效 - 核心价值观关键字 -->
-    <script>
-        (function () {
-        var a_idx = 0;
-        window.onclick = function (event) {
+
+        <!-- 网页鼠标点击特效 - 核心价值观关键字 -->
+        <script>
+            (function () {
+            var a_idx = 0;
+            window.onclick = function (event) {
             var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
             "❤敬业❤", "❤诚信❤", "❤友善❤");
             var heart = document.createElement("b"); //创建b元素
             heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
-
             document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
             a_idx = (a_idx + 1) % a.length;
             heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
@@ -155,7 +155,7 @@
             if (a <= 0) {
                 document.body.removeChild(heart);
                 clearInterval(timer);
-            } else {
+                } else {
                 heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
                     c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
                     s + ");";
@@ -163,98 +163,244 @@
                 y--;
                 a -= 0.016;
                 s += 0.002;
+                }}, 15)
             }
-            }, 15)
-        }
-        // 随机颜色
-        function randomColor() {
-        return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
-            .random() * 255)) + ")";
-        }
-        }());
+            // 随机颜色
+            function randomColor() {
+            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+            .random() * 255)) + ")";}
+            }());
         </script>
+        
+        
+        <!--颜文字+爱心-->
+        <!--@require https://images.qijishow.com/jquery.min1.7.js-->
+        <script> 
+            (function() {
+            var click_cnt = 0;
+            jQuery(document).ready(function($) {
+          $("html").click(function(e) {
+              var n = 18;
+              var $i;
+              click_cnt++;
+              if (click_cnt == 10) {
+                  $i = $("<b></b>").text("OωO");
+              } else if (click_cnt == 20) {
+                  $i = $("<b></b>").text("(๑•́ ∀ •̀๑)");
+              } else if (click_cnt == 30) {
+                  $i = $("<b></b>").text("(๑•́ ₃ •̀๑)");
+              } else if (click_cnt == 40) {
+                  $i = $("<b></b>").text("(๑•̀_•́๑)");
+              } else if (click_cnt == 50) {
+                  $i = $("<b></b>").text("（￣へ￣）");
+              } else if (click_cnt == 60) {
+                  $i = $("<b></b>").text("(╯°口°)╯(┴—┴");
+              } else if (click_cnt == 70) {
+                  $i = $("<b></b>").text("૮( ᵒ̌皿ᵒ̌ )ა");
+              } else if (click_cnt == 80) {
+                  $i = $("<b></b>").text("╮(｡>口<｡)╭");
+              } else if (click_cnt == 90) {
+                  $i = $("<b></b>").text("( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃");
+              } else if (click_cnt >= 100 && click_cnt <= 105) {
+                  $i = $("<b></b>").text("(ꐦ°᷄д°᷅)");
+              } else {
+                  $i = $("<b></b>").text("❤");
+                  n = Math.round(Math.random() * 14 + 6)
+              }
+              var x = e.pageX,
+                  y = e.pageY - 30;
+              $i.css({
+                  "z-index": 9999,
+                  "top": y - 20,
+                  "left": x,
+                  "position": "absolute",
+                  "color": "#E94F06",
+                  "font-size": n,
+                  "-moz-user-select": "none",
+                  "-webkit-user-select": "none",
+                  "-ms-user-select": "none"
+              });
+              $("body").append($i);
+              $i.animate({
+                  "top": y - 180,
+                  "opacity": 0
+              }, 1500, function() {
+                  $i.remove();
+              });
+            });
+            });
+            })();
+        </script>
+
+        
+        <!--表情-->
+        <!--@require https://images.qijishow.com/jquery.min1.7.js-->
+        <script>            
+            (function() {
+            var flag =false;
+            var chars=['😀','😁','😂','😃','😄','😅','😆','😇','😈','😉','😊','😋','😌','😍','😎','😏','😐','😑','😒','😓','😔','😕','😖','😗','😘','😙','😚','😛','😜','😝','😞','😟','😠','😡','😢','😣','😤','😥','😦','😧','😨','😩','😪','😫','😬','😭','😮','😯','😰','😱','😲','😳','😴','😵','😶','😷'];
+            jQuery(document).ready(function($) {
+          $("html").mousemove(function(e) {
+              if(flag){
+                  var color = "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6);
+                  var id=Math.ceil(Math.random()*62);
+                  var xr=Math.ceil(Math.random()*400)-200;
+                  var yr=Math.ceil(Math.random()*400)-200;
+                  var $i;
+                  $i = $("<b></b>").text(chars[id]);
+                  var n = Math.round(Math.random() * 10 + 16);
+                  var x = e.pageX,
+                      y = e.pageY;
+                  $i.css({
+                      "z-index": 9999,
+                      "color":color,
+                      "top": y,
+                      "left": x,
+                      "position": "absolute",
+                      "font-size": n,
+                      "-moz-user-select": "none",
+                      "-webkit-user-select": "none",
+                      "-ms-user-select": "none"
+                  });
+                  $("body").append($i);
+                  $i.animate({
+                      "top": y + yr,
+                      "left": x + xr,
+                      "opacity": 0,
+                  }, 1000, function() {
+                      $i.remove();
+                  });
+              }
+            });
+          
+          $("html").click(function(e) {
+              if(!flag){
+                  var color = "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6);
+                  var id=Math.ceil(Math.random()*62);
+                  var xr=Math.ceil(Math.random()*400)-200;
+                  var yr=Math.ceil(Math.random()*400)-200;
+                  var $i;
+                  $i = $("<b></b>").text(chars[id]);
+                  var n = Math.round(Math.random() * 10 + 26);
+                  var x = e.pageX,
+                      y = e.pageY;
+                  $i.css({
+                      "z-index": 9999,
+                      "color":color,
+                      "top": y,
+                      "left": x,
+                      "position": "absolute",
+                      "font-size": n,
+                      "-moz-user-select": "none",
+                      "-webkit-user-select": "none",
+                      "-ms-user-select": "none"
+                  });
+                  $("body").append($i);
+                  $i.animate({
+                      "top": y + yr,
+                      "left": x + xr,
+                      "opacity": 0,
+                  }, 1000, function() {
+                      $i.remove();
+                  });}
+            });
+            });
+            })();
+        </script>
+
 
         <!-- PC端下樱花效果 -->
         <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
         <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
         <script src="https://cdn.qqsuu.cn/api/js/hua.js"></script>
 
+
         <!-- 彩字滚动效果 -->
-        <style>#nr{font-size:20px;margin: 0;background: -webkit-linear-gradient(left,#ffffff,#ff0000 6.25%,#ff7d00 12.5%,#ffff00 18.75%,#00ff00 25%,#00ffff 31.25%,#0000ff 37.5%,#ff00ff 43.75%,#ffff00 50%,#ff0000 56.25%,#ff7d00 62.5%,#ffff00 68.75%,#00ff00 75%,#00ffff 81.25%,#0000ff 87.5%,#ff00ff 93.75%,#ffff00 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-size: 200% 100%;animation: masked-animation 2s infinite linear;}@keyframes masked-animation {0% {background-position: 0 0;}100% {background-position: -100%, 0;}}</style>
+        <style>#nr{font-size:20px;margin: 0;
+            background: -webkit-linear-gradient(left,#ffffff,#ff0000 6.25%,#ff7d00 12.5%,#ffff00 18.75%,#00ff00 25%,#00ffff 31.25%,#0000ff 37.5%,#ff00ff 43.75%,#ffff00 50%,#ff0000 56.25%,#ff7d00 62.5%,#ffff00 68.75%,#00ff00 75%,#00ffff 81.25%,#0000ff 87.5%,#ff00ff 93.75%,#ffff00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            animation: masked-animation 2s infinite linear;}
+            @keyframes masked-animation {0% {background-position: 0 0;}100% {background-position: -100%, 0;}}
+        </style>
         <div style="position:fixed;top:10px;left:0;width:100%;">
         <marquee><b id="nr">(｡･∀･)ﾉﾞ嗨，欢迎来到我的小破站。帅气漂亮的小哥哥小姐姐</b> </marquee></div>
         
+
         <!--开站时间开始-->
         <div style="position : fixed; bottom : 0 ; left : 0 ; width : 100% ; text-align: center ; color : #000 ; ">
-        <span class="nav-item"></span>
-         <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
+            <span class="nav-item"></span>
+            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
          <script language="javascript"> 
-        var now = new Date();
-        function createtime(){
-        var grt= new Date("03/20/2024 00:00:00");/*---这里是网站的启用时间--*/
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24;
-        dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
-        hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;}
-        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes);
-        if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds);
-        if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "⏱️本站已稳定运行"+dnum+"天";
-        document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
-    }
-    setInterval("createtime()",250); 
-    </script>
-    </div>
+            var now = new Date();
+            function createtime(){
+            var grt= new Date("03/20/2024 00:00:00");/*---这里是网站的启用时间--*/
+            now.setTime(now.getTime()+250);
+            days = (now - grt ) / 1000 / 60 / 60 / 24;
+            dnum = Math.floor(days);
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+            hnum = Math.floor(hours);
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+            minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes);
+            if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds);
+            if(String(snum).length ==1 ){snum = "0" + snum;}
+            document.getElementById("timeDate").innerHTML = "⏱️本站已稳定运行"+dnum+"天";
+            document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+            }
+            setInterval("createtime()",250); 
+         </script>
+        </div>
 
-    <!--明月浩空播放器-->
-    <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
-    <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1" au="1" lr="r"></script>  <!--key="165761088297"-->
+
+        <!--明月浩空播放器-->
+        <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+        <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1" au="1" lr="r"></script>  <!--key="165761088297"-->
 
     
-<!-- 看板娘 -->
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+        <!-- 看板娘 -->
+        <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
-<!--网易云音乐播放器2-->
-<meting-js 
-    fixed="true" 
-    autoplay="true" 
-    theme="#409EFF" 
-    list-folded="true" 
-    server="netease" 
-    type="playlist" 
-    id="26467411">
-</meting-js>
+        
+        <!--网易云音乐播放器2-->
+        <meting-js 
+            fixed="true" 
+            autoplay="true" 
+            theme="#409EFF" 
+            list-folded="true" 
+            server="netease" 
+            type="playlist" 
+            id="26467411">
+        </meting-js>
 
 
-<!--Sakana @require https://cdn.jsdelivr.net/npm/sakana -->
-<script src="https://cdn.jsdelivr.net/npm/sakana"></script>
-<div class="sakana-box"></div>
-<style>
-  .sakana-box{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    transform-origin: 100% 100%; /* 从右下开始变换 */
-  }
-</style>
-<script>
-  // 取消静音
-  Sakana.setMute(false);
-  // 启动
-  Sakana.init({
-    el:         '.sakana-box',     // 启动元素 node 或 选择器
-    inertia:    0.01,              // 惯性
-    decay:      0.99,              // 衰减
-    scale:      0.5,                // 缩放倍数
-    canSwitchCharacter: true,      // 允许换角色
-  });
-  sakana.confirmRunning();
-</script>
+        <!--Sakana @require https://cdn.jsdelivr.net/npm/sakana -->
+        <script src="https://cdn.jsdelivr.net/npm/sakana"></script>
+            <div class="sakana-box"></div>
+            <style>
+                .sakana-box{
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                transform-origin: 100% 100%; /* 从右下开始变换 */
+                }
+            </style>
+        <script>
+            // 取消静音
+            Sakana.setMute(false);
+            // 启动
+         Sakana.init({
+            el:         '.sakana-box',     // 启动元素 node 或 选择器
+            inertia:    0.01,              // 惯性
+            decay:      0.99,              // 衰减
+            scale:      0.5,                // 缩放倍数
+            canSwitchCharacter: true,      // 允许换角色
+         });
+         sakana.confirmRunning();
+        </script>
 
 
     </body>
