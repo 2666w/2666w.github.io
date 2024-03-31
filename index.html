@@ -64,6 +64,11 @@
         <!--wyy音乐播放器所用的文件-->
         <!-- require APlayer -->
         <link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
+        <style>
+            .aplayer.aplayer-fixed .aplayer-body {top: 0;height: 66px;}
+            .aplayer.aplayer-fixed {top: 65px;bottom: unset;}
+            .aplayer.aplayer-fixed .aplayer-list {margin-bottom: 0px;}
+        </style>
         <script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
         <!-- require MetingJS -->
         <script src="https://npm.elemecdn.com/meting@2.0.1/dist/Meting.min.js"></script>
@@ -129,7 +134,157 @@
                 ]}}
             });
         </script>
+        <!-- 渐变背景end -->
 
+
+        
+        <div class="preview" id="preview" style="position: fixed ; height:80px;top:0px;right:0;opacity:1;">
+            <iframe allowtransparency="true" id="previewIframe" frameborder="0" width="400" height="80" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?debug=true&s=1&z=1&t=0&v=0&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=400&h=80&align=center"></iframe>
+            <!--[if lt IE 7]><iframe frameborder="0" src="about:blank;" style="position:absolute;top:0px;right:0px;width:100%;height:100%;z-index:-1;filter:alpha(opacity=0);"></iframe><![endif]-->
+        </div>
+
+        <!--鼠标样式-->
+        <style>       
+            body {cursor:url(https://cdn.jsdelivr.net/gh/fz6m/Private-web@1.5/image/cursor/normal.cur)10 10,auto;   /*一瓣*/}
+            a    {cursor: url(https://cdn.jsdelivr.net/gh/fz6m/Private-web@1.5/image/cursor/ayuda.cur) 15 15,auto;  /*五瓣*/}
+            span {cursor: url(https://cdn.jsdelivr.net/gh/fz6m/Private-web@1.5/image/cursor/No_Disponible.cur),auto;     /*叉号花瓣*/}  
+        </style>         
+        <!--鼠标样式 end-->
+
+        <!-- 点击烟花特效-->
+        <script src="https://blog-static.cnblogs.com/files/melodyjerry/cursor-effects.js"></script>
+
+
+        <!-- 鼠标拖尾效果 -->
+        <span class="js-cursor-container"></span>
+        <script>
+          (function fairyDustCursor() {
+ 
+            var possibleColors = ["#D61C59", "#E7D84B", "#1B8798"]
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            var cursor = { x: width / 2, y: width / 2 };
+            var particles = [];
+ 
+            function init() {
+                bindEvents();
+                loop();
+            }
+ 
+            // Bind events that are needed
+            function bindEvents() {
+                document.addEventListener('mousemove', onMouseMove);
+                window.addEventListener('resize', onWindowResize);
+            }
+ 
+            function onWindowResize(e) {
+                width = window.innerWidth;
+                height = window.innerHeight;
+            }
+ 
+            function onMouseMove(e) {
+                cursor.x = e.clientX;
+                cursor.y = e.clientY;
+ 
+                addParticle(cursor.x, cursor.y, possibleColors[Math.floor(Math.random() * possibleColors.length)]);
+            }
+ 
+            function addParticle(x, y, color) {
+                var particle = new Particle();
+                particle.init(x, y, color);
+                particles.push(particle);
+            }
+ 
+            function updateParticles() {
+ 
+                // Updated
+                for (var i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                }
+ 
+                // Remove dead particles
+                for (var i = particles.length - 1; i >= 0; i--) {
+                    if (particles[i].lifeSpan < 0) {
+                        particles[i].die();
+                        particles.splice(i, 1);
+                    }
+                }
+ 
+            }
+ 
+            function loop() {
+                requestAnimationFrame(loop);
+                updateParticles();
+            }
+ 
+            /**
+             * Particles
+             */
+ 
+            function Particle() {
+ 
+                this.character = "*";
+                this.lifeSpan = 120; //ms
+                this.initialStyles = {
+                    "position": "fixed",
+                    "display": "inline-block",
+                    "top": "0px",
+                    "left": "0px",
+                    "pointerEvents": "none",
+                    "touch-action": "none",
+                    "z-index": "10000000",
+                    "fontSize": "25px",
+                    "will-change": "transform"
+                };
+ 
+                // Init, and set properties
+                this.init = function (x, y, color) {
+ 
+                    this.velocity = {
+                        x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
+                        y: 1
+                    };
+ 
+                    this.position = { x: x + 10, y: y + 10 };
+                    this.initialStyles.color = color;
+ 
+                    this.element = document.createElement('span');
+                    this.element.innerHTML = this.character;
+                    applyProperties(this.element, this.initialStyles);
+                    this.update();
+ 
+                    document.querySelector('.js-cursor-container').appendChild(this.element);
+                };
+ 
+                this.update = function () {
+                    this.position.x += this.velocity.x;
+                    this.position.y += this.velocity.y;
+                    this.lifeSpan--;
+ 
+                    this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px, 0) scale(" + (this.lifeSpan / 120) + ")";
+                }
+ 
+                this.die = function () {
+                    this.element.parentNode.removeChild(this.element);
+                }
+ 
+            }
+ 
+            /**
+             * Utils
+             */
+ 
+            // Applies css `properties` to an element.
+            function applyProperties(target, properties) {
+                for (var key in properties) {
+                    target.style[key] = properties[key];
+                }
+            }
+ 
+            if (!('ontouchstart' in window || navigator.msMaxTouchPoints)) init();
+         })();    
+        </script>
+        <!-- 鼠标拖尾效果 end-->
 
         <!-- 网页鼠标点击特效 - 核心价值观关键字 -->
         <script>
@@ -171,9 +326,9 @@
             .random() * 255)) + ")";}
             }());
         </script>
+        <!-- 点击核心价值观关键字 end-->
         
-        
-        <!--颜文字+爱心-->
+        <!--点击颜文字+爱心-->
         <!--@require https://images.qijishow.com/jquery.min1.7.js-->
         <script> 
             (function() {
@@ -231,9 +386,9 @@
             });
             })();
         </script>
-
+        <!--点击颜文字+爱心 end-->
         
-        <!--表情-->
+        <!--点击表情-->
         <!--@require https://images.qijishow.com/jquery.min1.7.js-->
         <script>            
             (function() {
@@ -307,13 +462,13 @@
             });
             })();
         </script>
-
+        <!--点击表情 end-->
 
         <!-- PC端下樱花效果 -->
         <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
         <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
         <script src="https://cdn.qqsuu.cn/api/js/hua.js"></script>
-
+        <!-- PC端下樱花效果 end-->
 
         <!-- 彩字滚动效果 -->
         <style>#nr{font-size:20px;margin: 0;
@@ -326,9 +481,9 @@
         </style>
         <div style="position:fixed;top:10px;left:0;width:100%;">
         <marquee><b id="nr">(｡･∀･)ﾉﾞ嗨，欢迎来到我的小破站。帅气漂亮的小哥哥小姐姐</b> </marquee></div>
-        
+        <!-- 彩字滚动效果 end-->
 
-        <!--开站时间开始-->
+        <!--开站时间-->
         <div style="position : fixed; bottom : 0 ; left : 0 ; width : 100% ; text-align: center ; color : #000 ; ">
             <span class="nav-item"></span>
             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
@@ -354,28 +509,41 @@
             setInterval("createtime()",250); 
          </script>
         </div>
-
+        <!--开站时间 end-->
 
         <!--明月浩空播放器-->
         <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
-        <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1" au="1" lr="r"></script>  <!--key="165761088297"-->
-
+        <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1" au="0" lr="r"></script>  <!--key="165761088297"-->
+        <!--明月浩空播放器 end-->
     
-        <!-- 看板娘 -->
-        <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
-
-        
         <!--网易云音乐播放器2-->
         <meting-js 
             fixed="true" 
-            autoplay="true" 
+            autoplay="false" 
             theme="#409EFF" 
-            list-folded="true" 
+            list-folded="true"
             server="netease" 
             type="playlist" 
-            id="26467411">
+            id="26467411"
+            order='random' 
+            bottom='5em'>
         </meting-js>
+        <!--网易云音乐播放器 end-->
 
+        <!-- 看板娘 -->
+        <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+        <!-- 看板娘 end-->
+
+        <!--小枫网络HTML5悬浮音乐播放器插件 https://www.xfabe.com -->
+        <div id="xf-MusicPlayer" 
+            data-cdnName="https://player.xfyun.club/js"  
+            data-themeColor="xf-darkGreen" 
+            data-bottomHeight="2em" 
+            data-songChart="热歌榜"
+            data-fadeOutAutoplay 
+            data-random="true"></div>
+        <script src="https://player.xfyun.club/js/xf-MusicPlayer/js/xf-MusicPlayer.min.js"></script>
+        <!--小枫网络HTML5悬浮音乐播放器插件 end-->
 
         <!--Sakana @require https://cdn.jsdelivr.net/npm/sakana -->
         <script src="https://cdn.jsdelivr.net/npm/sakana"></script>
@@ -401,7 +569,17 @@
          });
          sakana.confirmRunning();
         </script>
+        <!--Sakana end-->
 
+        <!--不蒜子计数器-->
+        <center>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <!--添加一个访问量-->
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </center>
+        <!--不蒜子计数器 end-->
 
     </body>
 </html>
