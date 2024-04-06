@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+    <link rel="stylesheet" href="./assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="./assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/xenon-core.css">
+    <link rel="stylesheet" href="./assets/css/xenon-components.css">
+    <link rel="stylesheet" href="./assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="./assets/css/nav.css">
+    <script src="./assets/js/jquery-1.11.1.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="page-body">
+    <!-- skin-white -->
+    <div class="page-container">
+        <div class="sidebar-menu toggle-others fixed">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="https://2666w.github.io" class="logo-expanded">
+                            <img src="../assets/avatar.png" width="100%" alt="" />
+                        </a>
+                        <a href="https://2666w.github.io" class="logo-collapsed">
+                            <img src="../assets/avatar.png" width="40" alt="" />
+                        </a>
+                    </div>
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="#" data-toggle="user-info-menu">
+                            <i class="linecons-cog"></i>
+                        </a>
+                        <a href="#" data-toggle="mobile-menu">
+                            <i class="fa-bars"></i>
+                        </a>
+                    </div>
+                </header>
+                <ul id="main-menu" class="main-menu">
+                    <li>
+                        <a href="#常用推荐" class="smooth">
+                            <i class="linecons-star"></i>
+                            <span class="title">HTML例子</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <nav class="navbar user-info-navbar" role="navigation">
+                <!-- User Info, Notifications and Menu Bar -->
+                <!-- Left links for user info navbar -->
+                <ul class="user-info-menu left-links list-inline list-unstyled">
+                    <li class="hidden-sm hidden-xs">
+                        <a href="#" data-toggle="sidebar">
+                            <i class="fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="user-info-menu right-links list-inline list-unstyled">
+                    <li class="hidden-sm hidden-xs">
+                        <a href="https://2666w.github.io" target="_blank">
+                            <i class="fa-github"></i>  GitHub
+                        </a>
+                    </li>
+                </ul>
+                <!-- <a href="https://2666w.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a> -->
+
+            </nav>
+
+            <!-- 常用推荐 -->
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="常用推荐"></i>HTML例子</h4>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('love/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>LOVE</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是LOVE的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('aplayer/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Aplayer音乐播放器</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是音乐播放器的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('xiaofeng/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>小枫悬浮音乐播放插件</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是小枫网络HTML5悬浮音乐播放器的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('myhk-play/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>MYHK</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是MYHK音乐播放器的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('click/core values/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>核心价值观关键字点击特效</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是核心价值观关键字的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('click/Kaomoji/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>颜文字+爱心点击特效</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是点击颜文字+爱心的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('click/emoji/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>表情点击特效</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是点击表情的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('click/fireworks/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>烟花点击特效</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是烟花特效的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('click/polka dot/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>彩色圆点气泡点击特效</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是彩色圆点气泡的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('datetime/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>日期时间</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是日期时间的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('webtime/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>开站时间</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是开站时间的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('busuanzi/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>不蒜子计数器</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是不蒜子计数器的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('gradientbg/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>渐变背景</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是渐变背景的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('colourfultext/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>彩字滚动效果</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是彩字滚动效果的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('sakana/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Sakana</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是Sakana的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('tqi-tips/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>隐藏式天气插件</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是隐藏式天气插件的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('yinghua/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>樱花效果</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是樱花效果的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('trailing/effect1/', '_blank')" >
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="./assets/images/ico.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>拖尾效果1</strong>
+                                </a>
+                                <p class="overflowClip_2">这里是鼠标拖尾效果的例子展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <br />
+            <!-- END 常用推荐 -->
+            
+        </div>
+    </div>
+
+
+
+    
+    <!-- 锚点平滑移动 -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+         //img lazy loaded
+         const observer = lozad();
+         observer.observe();
+
+        $(document).on('click', '.has-sub', function(){
+            var _this = $(this)
+            if(!$(this).hasClass('expanded')) {
+               setTimeout(function(){
+                    _this.find('ul').attr("style","")
+               }, 300);
+              
+            } else {
+                $('.has-sub ul').each(function(id,ele){
+                    var _that = $(this)
+                    if(_this.find('ul')[0] != ele) {
+                        setTimeout(function(){
+                            _that.attr("style","")
+                        }, 300);
+                    }
+                })
+            }
+        })
+        $('.user-info-menu .hidden-sm').click(function(){
+            if($('.sidebar-menu').hasClass('collapsed')) {
+                $('.has-sub.expanded > ul').attr("style","")
+            } else {
+                $('.has-sub.expanded > ul').show()
+            }
+        })
+        $("#main-menu li ul li").click(function() {
+            $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
+            $(this).addClass('active'); // 添加当前元素的样式
+        });
+        $("a.smooth").click(function(ev) {
+            ev.preventDefault();
+
+            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+            ps_destroy();
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top - 30
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+        });
+        return false;
+    });
+
+    var href = "";
+    var pos = 0;
+    $("a.smooth").click(function(e) {
+        $("#main-menu li").each(function() {
+            $(this).removeClass("active");
+        });
+        $(this).parent("li").addClass("active");
+        e.preventDefault();
+        href = $(this).attr("href");
+        pos = $(href).position().top - 30;
+    });
+    </script>
+
+    <!--小枫网络HTML5悬浮音乐播放器插件 https://www.xfabe.com -->
+    <div id="xf-MusicPlayer" 
+    data-cdnName="https://player.xfyun.club/js"  
+    data-themeColor="xf-darkGreen" 
+    data-bottomHeight="2em" 
+    data-songChart="热歌榜"
+    data-fadeOutAutoplay 
+    data-random="true"></div>
+    <script src="https://player.xfyun.club/js/xf-MusicPlayer/js/xf-MusicPlayer.min.js"></script>
+    <!--小枫网络HTML5悬浮音乐播放器插件 end-->
+    <!-- 鼠标拖尾效果 -->
+    <span class="js-cursor-container"></span>
+    <script src="../js/trailing effect 1.js"></script>
+
+    <!-- Bottom Scripts -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/TweenMax.min.js"></script>
+    <script src="./assets/js/resizeable.js"></script>
+    <script src="./assets/js/joinable.js"></script>
+    <script src="./assets/js/xenon-api.js"></script>
+    <script src="./assets/js/xenon-toggles.js"></script>
+    <!-- JavaScripts initializations and stuff -->
+    <script src="./assets/js/xenon-custom.js"></script>
+    <script src="./assets/js/lozad.js"></script>
+</body>
+
+</html>
