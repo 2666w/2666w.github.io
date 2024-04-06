@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开站时间</title>
+    <style>
+        body{background: url(https://api.oneneko.com/v1/bing_today) rgba(0, 0, 0, 0.2) no-repeat;
+              background-blend-mode: multiply;}/*https://api.lyiqk.cn/scenery  https://api.kdcc.cn/*/
+      </style>
+</head>
+<body>
+    <div style="margin-left: 90px;top: 70px;position: absolute;color: #ff0000;">
+        <h2>开站时间的展示</h2>
+        <p>这里是开站时间的例子展示 <a href="https://2666w.github.io/example/">返回</a></p>
+    </div>
+
+        <!--开站时间-->
+        <div style="position : fixed; bottom : 50% ; left : 0 ; width : 100% ; text-align: center ; color : #000 ; ">
+            <span class="nav-item"></span>
+            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
+         <script language="javascript"> 
+            var now = new Date();
+            function createtime(){
+            var grt= new Date("03/20/2024 00:00:00");/*---这里是网站的启用时间--*/
+            now.setTime(now.getTime()+250);
+            days = (now - grt ) / 1000 / 60 / 60 / 24;
+            dnum = Math.floor(days);
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+            hnum = Math.floor(hours);
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+            minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes);
+            if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds);
+            if(String(snum).length ==1 ){snum = "0" + snum;}
+            document.getElementById("timeDate").innerHTML = "⏱️本站已稳定运行"+dnum+"天";
+            document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+            }
+            setInterval("createtime()",250); 
+         </script>
+        </div>
+        <!--开站时间 end-->
+</body>
+</html>
