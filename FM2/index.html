@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>佛山FM</title>
     <!-- 引入 Video.js 库 -->
     <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet">
@@ -22,9 +23,12 @@
         }
         #player{
             position: fixed;
-            top: 30%;
-            left: 5%;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
+
+
         
         /* 歌曲信息模块 */
         #player-content1{
@@ -237,7 +241,7 @@
 </head>
 <body>
     <!-- 音源列表和播放器容器 -->
-    <div id="player">
+    <div id="player" style="width: 350px;height: 90px;">
         <!-- 歌曲信息模块 -->
         <div id="player-content1">
             <audio id="audio" class="video-js vjs-default-skin" playsinline style="display: none"></audio>
@@ -360,7 +364,7 @@
             }  
             // 在切换音频时重置计时
             const currentTimeElement = document.getElementById('current-time');
-            currentTimeElement.textContent = '00:00';
+            currentTimeElement.textContent = '';
 
             player.src({ type: 'application/x-mpegURL', src: url });
             player.ready(function() {
@@ -509,6 +513,7 @@
             return false;
         }
     </script>
+    <script src="Spider web.js"></script>
 
 </body>
 </html>
