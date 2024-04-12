@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>佛山FM</title>
+    <!-- 引入 Video.js 库 -->
+    <link href="video-js.css" rel="stylesheet">
+    <script src="video.min.js"></script>
+    <!-- 引入 Video.js HLS 插件 -->
+    <script src="videojs-contrib-hls.min.js"></script>
+    <!-- 引入 CSS -->
+    <link rel="stylesheet" type="text/css" href="FM.css">
+</head>
+<body>
+    <!-- 背景 -->
+	<canvas id="canvas" class="canvas"></canvas>
+    <div class="FSDT">
+        <a href="https://www.radiofoshan.com.cn/" target="_blank" rel="noopener noreferrer">
+            <img src="img/ic_index.png" style="width:132px;height:43px;" draggable="false">
+        </a>
+    </div>
+
+    <!-- 音源列表和播放器容器 -->
+    <div id="player" style="width: 350px;height: 90px;">
+        <!-- 歌曲信息模块 -->
+        <div id="player-content1">
+            <audio id="audio" class="video-js vjs-default-skin" playsinline style="display: none"></audio>
+            <!-- 歌曲名 -->
+            <div class="music-name"></div>
+            <!-- 时间 -->
+            <div id="progress-container">
+                <span id="current-time"></span>
+            </div>
+        </div>
+        
+        <!-- 控制模块 -->
+        <div id="player-content2">
+            <!-- 左侧歌曲封面旋转模块 -->
+            <div class="music-imgs" id="imageContainer">
+                <!-- 封面图 -->
+                <img src="./img/record.png" id="audioimg" style="width:100px;height:100px;" draggable="false">
+            </div>
+            <!-- 右侧歌曲操作模块 -->
+            <div class="player-controls">
+                <!-- 上一首按钮 -->
+                <div class="btn prev"><div id="prev-icon"></div></div>                    
+                <!-- 暂停/播放 按钮 -->
+                <div class="btn play-pause" id="pause-play-btn"></div>
+                <!-- 下一首按钮 -->
+                <div class="btn next"><div id="next-icon"></div></div>
+                    
+                <!-- 音量调节器容器 -->
+                <div class="btn volume" id="volume-container" >
+                    <!-- 使用喇叭图标 -->
+                    <div id="volume-icon"></div>
+                    <!-- 自定义的音量调节器 -->
+                    <input type="range" id="volume-bar" value="100" max="100" orient="vertical">
+                </div>
+
+                <div class="btn menu">
+                    <div id="menu-icon"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 音源列表 -->
+        <div id="player-content3">            
+            <div id="audio-list">
+              <ul id="audio-list-ul">
+                <!-- 音源列表项将在这里动态生成 -->
+              </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 引入自定义的JavaScript代码 -->
+    <script src="FM.js"></script>
+
+</body>
+</html>
