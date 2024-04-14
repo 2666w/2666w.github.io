@@ -10,25 +10,31 @@ const audioSources = [
     { name: "FM106.1-广州交通广播", url: "https://tencentplay.gztv.com/live/fm1061.m3u8?txSecret=cc7b1a4166f1d00d8d9e64717b5a6cc4&txTime=18ed7702c5a" ,img:"./img/1061.jpg"},
     { name: "FM96.2-广州新闻资讯", url: "https://tencentplay.gztv.com/live/fm962.m3u8?txSecret=6c9997d52e9fbe1c3a10e83f28570f27&txTime=18ed775ec73" ,img:"./img/962.jpg"},
     { name: "FM102.7-广州汽车音乐", url: "https://tencentplay.gztv.com/live/fm1027.m3u8?txSecret=cf78ef371503e3544e3db79b399e9a64&txTime=18ed7783401" ,img:"./img/1027.jpg"},
-    { name: "FM91.4-广东新闻广播", url: "https://rlizhi.gdtv.cn/audio/fm914.m3u8?auth_key=1713010004-0-0-5a8799112f1a94e64f77bdc634ff45f6" ,img:"./img/914.jpg"},
-    { name: "FM97.4-珠江经济台", url: "https://rlizhi.gdtv.cn/audio/fm974.m3u8?auth_key=1713010743-0-0-c993c098fcf838e051d28e18125244e3" ,img:"./img/974.jpg"},
-    { name: "FM99.3-音乐之声", url: "https://rlizhi.gdtv.cn/audio/fm993.m3u8?auth_key=1713010841-0-0-a875739c7f6676212946f295c66cfffb" ,img:"./img/993.jpg"},
-    { name: "FM105.2-交通之声", url: "https://rlizhi.gdtv.cn/audio/fm1052.m3u8?auth_key=1713010913-0-0-c57def6c586a9bcfaec343a579ea5209" ,img:"./img/1052.jpg"},
-    { name: "FM93.6-南方生活广播", url: "https://rlizhi.gdtv.cn/audio/fm936.m3u8?auth_key=1713010992-0-0-6d2a6ff3decd4e53a9a1f44734e6dfdd" ,img:"./img/936.jpg"},
-    { name: "FM103.6-城市之声", url: "https://rlizhi.gdtv.cn/audio/fm1036.m3u8?auth_key=1713011037-0-0-e78726e0384cd8702af4a7e5653f5173" ,img:"./img/1036.jpg"},
-    { name: "FM95.3-股市广播", url: "https://rlizhi.gdtv.cn/audio/fm953.m3u8?auth_key=1713011195-0-0-b69dbfdc7404e2da5dd68abdbc8ce545" ,img:"./img/953.jpg"},
-    { name: "FM107.7-文体广播", url: "https://rlizhi.gdtv.cn/audio/fm1077.m3u8?auth_key=1713011243-0-0-6aed285e5abf0ff10ef2a9a80337598e" ,img:"./img/1077.jpg"},
-    { name: "FM105.7-珠江之声", url: "https://rlizhi.gdtv.cn/audio/fm1057.m3u8?auth_key=1713011299-0-0-fbdfeff3173b721d0f19b538623ad637" ,img:"./img/1057.jpg"},
+    { name: "FM91.4-广东新闻广播", url: "https://lhttp.qingting.fm/live/1254/64k.mp3" ,img:"./img/914.jpg"},
+    { name: "FM97.4-珠江经济台", url: "https://lhttp.qingting.fm/live/1259/64k.mp3" ,img:"./img/974.jpg"},
+    { name: "FM99.3-音乐之声", url: "https://lhttp.qingting.fm/live/1260/64k.mp3" ,img:"./img/993.jpg"},
+    { name: "FM105.2-交通之声", url: "https://lhttp.qingting.fm/live/1262/64k.mp3" ,img:"./img/1052.jpg"},
+    { name: "FM93.6-南方生活广播", url: "https://lhttp.qingting.fm/live/468/64k.mp3" ,img:"./img/936.jpg"},
+    { name: "FM103.6-城市之声", url: "https://lhttp.qingting.fm/live/469/64k.mp3" ,img:"./img/1036.jpg"},
+    { name: "FM95.3-股市广播", url: "https://lhttp.qingting.fm/live/4847/64k.mp3" ,img:"./img/953.jpg"},
+    { name: "FM107.7-文体广播", url: "https://lhttp.qingting.fm/live/471/64k.mp3" ,img:"./img/1077.jpg"},
+    { name: "FM105.7-珠江之声", url: "https://lhttp.qingting.fm/live/470/64k.mp3" ,img:"./img/1057.jpg"},
     // 更多音源...
 ];
+
+// SVG
+const prevSVG = '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="424"><path d="M409.6 379.965l290.673-183.214c43.049-27.136 77.967-8.396 77.967 42.046v546.406c0 50.36-34.857 69.223-77.967 42.046L409.6 644.035V757.76a81.92 81.92 0 1 1-163.84 0V266.24a81.92 81.92 0 1 1 163.84 0v113.725z" fill="#333333" p-id="425"></path></svg>'
+const playSVG = '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="402"><path d="M245.76 785.203V238.797c0-50.442 34.918-69.182 77.967-42.046l422.196 266.117c43.11 27.157 43.069 71.128 0 98.284L323.727 827.249c-43.11 27.177-77.967 8.315-77.967-42.046z" fill="#333333" p-id="403"></path></svg>'
+const pauseSVG = '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="347"><path d="M327.68 184.32a81.92 81.92 0 0 1 81.92 81.92v491.52a81.92 81.92 0 1 1-163.84 0V266.24a81.92 81.92 0 0 1 81.92-81.92z m368.64 0a81.92 81.92 0 0 1 81.92 81.92v491.52a81.92 81.92 0 1 1-163.84 0V266.24a81.92 81.92 0 0 1 81.92-81.92z" fill="#333333" p-id="348"></path></svg>'
+const nextSVG = '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="435"><path d="M614.4 379.965V266.24a81.92 81.92 0 1 1 163.84 0v491.52a81.92 81.92 0 1 1-163.84 0V644.035L323.727 827.249c-43.11 27.177-77.967 8.315-77.967-42.046V238.797c0-50.442 34.918-69.182 77.967-42.046L614.4 379.965z" fill="#333333" p-id="436"></path></svg>'
+const soundSVG = '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="490"><path d="M552.96 152.064v719.872c0 16.118-12.698 29.184-28.365 29.184a67.482 67.482 0 0 1-48.394-20.644L329.359 729.354a74.547 74.547 0 0 0-53.493-22.794H250.47c-104.386 0-189.03-87.101-189.03-194.56s84.644-194.56 189.03-194.56h25.396c20.07 0 39.3-8.192 53.473-22.794L476.18 143.503a67.482 67.482 0 0 1 48.436-20.623c15.646 0 28.344 13.066 28.344 29.184z m216.965 101.58a39.936 39.936 0 0 1 0-57.425 42.25 42.25 0 0 1 58.778 0c178.483 174.408 178.483 457.154 0 631.562a42.25 42.25 0 0 1-58.778 0 39.936 39.936 0 0 1 0-57.405 359.506 359.506 0 0 0 0-516.752zM666.542 373.884a39.731 39.731 0 0 1 0-55.235 37.52 37.52 0 0 1 53.944 0c104.305 106.783 104.305 279.921 0 386.704a37.52 37.52 0 0 1-53.944 0 39.731 39.731 0 0 1 0-55.235c74.486-76.288 74.486-199.946 0-276.234z" fill="#333333" p-id="491"></path></svg>'
+const menuSVG ='<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2920"><path d="M64 64h896v128H64V64z m0 768h896v128H64v-128z m0-384h896v128H64V448z" fill="#262626" p-id="2921"></path></svg>'
 
 //监听player-content1
 const playerContent1 = document.getElementById('player-content1');
 
 // 获取暂停播放按钮 
 const pausePlayBtn = document.getElementById('pause-play-btn');
-// 设置初始状态为播放
-pausePlayBtn.style.backgroundImage = 'url(img/play.png)';
 
 // 为 prev 和 next 按钮添加事件监听器
 const prevBtn = document.querySelector('.prev');
@@ -61,7 +67,7 @@ function createAudioList(audioSources) {
             playAudioSource(source.url);
             showAudioImage(source.img);
             updateMusicName(source.name); // 更新音乐名称
-            pausePlayBtn.style.backgroundImage = 'url(img/pause.png)'; // 更新按钮为“暂停”
+            pausePlayBtn.innerHTML = pauseSVG; // 更新按钮为“暂停”
         });
         listContainer.appendChild(listItem);
     });
@@ -78,7 +84,7 @@ function playAudioSource(url) {
     const currentTimeElement = document.getElementById('current-time');
     currentTimeElement.textContent = '';/*00:00*/
 
-    player.src({ type: 'application/x-mpegURL', src: url });
+    player.src({src: url });
     player.ready(function() {
         this.play();
     });
@@ -148,11 +154,11 @@ function togglePausePlay() {
     if (player.paused()) {
         console.log("Audio is paused, playing now");
         player.play();
-        pausePlayBtn.style.backgroundImage = 'url(img/pause.png)';
+        pausePlayBtn.innerHTML = pauseSVG;
     } else {
         console.log("Audio is playing, pausing now");
         player.pause();        
-        pausePlayBtn.style.backgroundImage = 'url(img/play.png)';
+        pausePlayBtn.innerHTML = playSVG;
     }
 }
 
@@ -189,7 +195,7 @@ function playPrevAudio() {
     playAudioSource(prevSource.url);
     showAudioImage(prevSource.img);
     updateMusicName(prevSource.name);
-    pausePlayBtn.style.backgroundImage = 'url(img/pause.png)';
+    pausePlayBtn.innerHTML = pauseSVG;
 }
 
 // 播放下一首音频的函数
@@ -205,14 +211,14 @@ function playNextAudio() {
     playAudioSource(nextSource.url);
     showAudioImage(nextSource.img);
     updateMusicName(nextSource.name);
-    pausePlayBtn.style.backgroundImage = 'url(img/pause.png)';
+    pausePlayBtn.innerHTML = pauseSVG;
 }
 
 // 从音频列表中随机选择一条链接进行播放的函数
 function playRandomAudio() {
     const randomIndex = Math.floor(Math.random() * audioSources.length);
     const randomSource = audioSources[randomIndex];
-    pausePlayBtn.style.backgroundImage = 'url(img/pause.png)';
+    pausePlayBtn.innerHTML = pauseSVG;
     playAudioSource(randomSource.url);
     showAudioImage(randomSource.img);
     updateMusicName(randomSource.name);
