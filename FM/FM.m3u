@@ -1,0 +1,62 @@
+#EXTM3U name="广佛电台FM"
+#佛山电台
+#EXTINF:-1 tvg-id="FS" tvg-logo=" https://upload.radiofoshan.com.cn/1/2020/1103/1604406912338545_240x240.jpg" group-title="佛山电台", FM92.4-南海广播
+https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_42_audio.m3u8
+#EXTINF:-1 tvg-id="FS" tvg-logo=" https://upload.radiofoshan.com.cn/1/2020/1103/1604407046864090_240x240.jpg" group-title="佛山电台", FM94.6-佛山综合广播
+https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_46_audio.m3u8
+#EXTINF:-1 tvg-id="FS" tvg-logo=" https://upload.radiofoshan.com.cn/1/2020/1103/1604406876504435_240x240.jpg" group-title="佛山电台", FM88.3-高明广播
+https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_43_audio.m3u8
+#EXTINF:-1 tvg-id="FS" tvg-logo=" https://upload.radiofoshan.com.cn/1/2020/1103/1604406991426433_240x240.jpg" group-title="佛山电台", FM90.1-顺德广播
+https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_44_audio.m3u8
+#EXTINF:-1 tvg-id="FS" tvg-logo=" https://upload.radiofoshan.com.cn/1/2020/1103/1604406893701472_240x240.jpg" group-title="佛山电台", FM90.6-三水广播
+https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_45_audio.m3u8
+#EXTINF:-1 tvg-id="FS" tvg-logo=" https://upload.radiofoshan.com.cn/1/2020/1103/1604407028658204_240x240.png" group-title="佛山电台", FM98.5-佛山音乐广播
+https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_41_audio.m3u8
+
+#广州电台
+#EXTINF:-1 tvg-id="GZ" tvg-logo=" https://load.gztv.com/filedata/gzbn/product/src/2023/0419/thumb/1425c3bb8f78476ab80a8000af41a4dc1377801987940352.jpg " group-title="广州电台", FM88.0-广州青少年广播
+https://tencentplay.gztv.com/live/fm880.m3u8?txSecret=43e759eb546ad0658f0903e5ac8d7733&txTime=18ed764ce11
+#EXTINF:-1 tvg-id="GZ" tvg-logo=" https://load.gztv.com/filedata/gzbn/product/src/2024/0105/thumb/62bbfdf5749741d899e681455ad678e51396267889074176.jpg " group-title="广州电台", FM106.1-经济交通广播
+https://tencentplay.gztv.com/live/fm1061.m3u8?txSecret=cc7b1a4166f1d00d8d9e64717b5a6cc4&txTime=18ed7702c5a
+#EXTINF:-1 tvg-id="GZ" tvg-logo=" https://load.gztv.com/filedata/gzbn/product/src/2022/1012/thumb/e237b0104ac14ae8a874706d43fab25f.jpg " group-title="广州电台", FM96.2-新闻资讯广播
+https://tencentplay.gztv.com/live/fm962.m3u8?txSecret=6c9997d52e9fbe1c3a10e83f28570f27&txTime=18ed775ec73
+#EXTINF:-1 tvg-id="GZ" tvg-logo=" https://load.gztv.com/filedata/gzbn/product/src/2023/0419/thumb/24b44c39a51141fcafc0c3d20d25a6291377801974915072.jpg " group-title="广州电台", FM102.7-金曲音乐广播
+https://tencentplay.gztv.com/live/fm1027.m3u8?txSecret=cf78ef371503e3544e3db79b399e9a64&txTime=18ed7783401
+
+#广东电台
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202109/0.03748908070393519628f4c932fb282e942OSS1630576729.png " group-title="广东电台", FM91.4-广东新闻广播
+https://lhttp.qingting.fm/live/1254/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202109/0.986862757622444235b2e2f050a9656a6OSS1630576753.png " group-title="广东电台", FM97.4-珠江经济台
+https://lhttp.qingting.fm/live/1259/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202109/0.070466864478565984968adb1bd6e36150OSS1630576772.png " group-title="广东电台", FM99.3-音乐之声
+https://lhttp.qingting.fm/live/1260/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202109/0.341386404726067965bdf60610018fcd28OSS1630576805.png " group-title="广东电台", FM105.2-交通之声
+https://lhttp.qingting.fm/live/1262/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202109/0.347007050052199346962facdf2fb76b18OSS1630576824.png " group-title="广东电台", FM93.6-南方生活广播
+https://lhttp.qingting.fm/live/468/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202109/0.89328466873512957d2d2703823dd0bf4OSS1630576843.png " group-title="广东电台", FM103.6-城市之声
+https://lhttp.qingting.fm/live/469/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202201/0.4995974945324668277b68d27b6fdba30OSS1641366683.png " group-title="广东电台", FM107.7-文体广播
+https://lhttp.qingting.fm/live/471/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://img.gdtv.cn/image/202207/0.3688465326182399628fecbb57443fd98cOSS1659056772.png " group-title="广东电台", FM105.7-珠江之声
+https://lhttp.qingting.fm/live/470/64k.mp3
+#EXTINF:-1 tvg-id="GD" tvg-logo=" https://radio5.cn/file/2023/04/2023050312110067.png " group-title="广东电台", FM95.3-股市广播
+https://lhttp.qingting.fm/live/4847/64k.mp3
+
+#国家广播
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/media/1100/20210425/1619317448858.jpg " group-title="中国广播", 中国之声
+https://ngcdn001.cnr.cn/live/zgzs/index.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/img/1100/20230315/1678868245687.png " group-title="中国广播", 经济之声
+https://ngcdn002.cnr.cn/live/jjzs/index.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/img/1100/20230612/1686554758307.png " group-title="中国广播", 台海之声
+https://ngcdn005.cnr.cn/live/zhzs/index.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/img/1100/20230612/1686554715652.png " group-title="中国广播", 神州之声
+https://ngcdn006.cnr.cn/live/szzs/index.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/img/1100/20230612/1686554792374.png " group-title="中国广播", 香港之声
+https://ngcdn008.cnr.cn/live/xgzs/index.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/img/1100/20221211/1670743148470.jpg " group-title="中国广播", 中国交通之声
+https://ngcdn016.cnr.cn/live/gsgljtgb/index.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/img/1100/20200306/1583464064428.jpg " group-title="中国广播", 环球资讯
+https://sk.cri.cn/905.m3u8
+#EXTINF:-1 tvg-id="CNR" tvg-logo=" https://cnvod.cnr.cn/audio2017/ondemand/media/1100/20200528/1590662120265.jpg " group-title="中国广播", 南海之声
+https://sk.cri.cn/nhzs.m3u8
